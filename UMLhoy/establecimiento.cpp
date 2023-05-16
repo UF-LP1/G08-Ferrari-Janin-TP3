@@ -21,13 +21,11 @@
 bool establecimiento::buscarproductos(string nombre)
 {   
     list<producto>::iterator it = Lista.begin();
-    int i = 0;
     while (it != Lista.end()) {
         if (it->get_nombre() == nombre) {
             return true;
         }
-        i++;
-        it._Ptr = it._Ptr->_Next;
+        it++;
     }
     return false;
 };
@@ -70,13 +68,14 @@ void establecimiento::set_nombre(string n_nombre) {
 }
 
 
-establecimiento::establecimiento(string horario, string nombre, string direccion, int telefono)
+establecimiento::establecimiento(string horario, string nombre, string direccion, int telefono, list<producto> Lista)
 {
     this->horario = horario;
     this->nombre = nombre;
     this->direccion = direccion;
     this->telefono = telefono;
-    Lista = list<producto>();
+    this->Lista = Lista;
+   // Lista = list<producto>();
 };
 
 establecimiento::~establecimiento()

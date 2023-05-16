@@ -18,7 +18,7 @@ public:
  * @param telefono
  */
 
-    establecimiento(string horario, string nombre, string direccion, int telefono);
+    establecimiento(string horario, string nombre, string direccion, int telefono, list<producto> Lista);
     ~establecimiento();
 
 bool buscarproductos(string nombre);
@@ -47,7 +47,6 @@ private:
     string nombre;
     string direccion;
     int telefono;
-     
     list<producto> Lista; //lista de todos los productos del local
 };
 

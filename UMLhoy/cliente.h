@@ -28,7 +28,7 @@ void set_numturno(int nuevo_nturno);
  */
 void set_metodo_pago(string n_metodo_pago);
 
-void agregarproducto(producto producto_agregar, list<producto> Lista_comprar);
+void agregarproducto(producto producto_agregar, list<producto>& Lista_comprar);
     
 /**
  * @param establecimiento.telefono

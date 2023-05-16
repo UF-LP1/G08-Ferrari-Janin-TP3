@@ -32,7 +32,7 @@ string producto::get_nombre() {
 /**
  * @return unsigned int
  */
-int producto::get_cantidad() {
+ int producto::get_cantidad() {
     return this->cantidad;
 }
 

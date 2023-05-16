@@ -19,7 +19,7 @@ public:
 
 string get_nombre();
     
-int get_cantidad();
+ int get_cantidad();
     
 int get_precio();
     

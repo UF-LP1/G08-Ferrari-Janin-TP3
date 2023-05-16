@@ -45,6 +45,9 @@
     <ClCompile Include="golosinas.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
     <ClCompile Include="metododepago.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -58,9 +61,6 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="velas.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -84,6 +84,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="deco.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="decorep.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="disfraces.h">

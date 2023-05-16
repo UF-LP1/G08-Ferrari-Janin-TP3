@@ -7,6 +7,7 @@
 #define _CARRITODECOMPRA_H
 #include "libreria.h"
 #include "cliente.h"
+#include "producto.h"
 
 
 

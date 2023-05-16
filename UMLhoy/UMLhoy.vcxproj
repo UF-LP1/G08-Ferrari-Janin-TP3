@@ -29,9 +29,9 @@
     <ClCompile Include="establecimiento.cpp" />
     <ClCompile Include="globos.cpp" />
     <ClCompile Include="golosinas.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="metododepago.cpp" />
     <ClCompile Include="producto.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="trabajadores.cpp" />
     <ClCompile Include="vajilla_descartable.cpp" />
     <ClCompile Include="velas.cpp" />
@@ -44,6 +44,7 @@
     <ClInclude Include="cosascot.h" />
     <ClInclude Include="cotillon.h" />
     <ClInclude Include="deco.h" />
+    <ClInclude Include="decorep.h" />
     <ClInclude Include="disfraces.h" />
     <ClInclude Include="empleado.h" />
     <ClInclude Include="encargado.h" />

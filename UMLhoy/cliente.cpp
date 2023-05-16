@@ -42,11 +42,9 @@ void cliente::set_metodo_pago(string n_metodo_pago) {
     return;
 }
 
-void cliente::agregarproducto(producto producto_agregar,list<producto> Lista_comprar) {
+void cliente::agregarproducto(producto producto_agregar,list<producto>& Lista_comprar) {
 
     Lista_comprar.push_back(producto_agregar);
-    
-    return;
 }
 /**
  * @param establecimiento.telefono

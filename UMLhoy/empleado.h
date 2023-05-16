@@ -14,12 +14,12 @@
 class empleado : public trabajadores {
 
 public:
-    empleado();
+    empleado(string nombre, string apellido, int dni, string horario_trabajo, float sueldo, string sexo);
     ~empleado();
     /**
      * @param cliente.nturno
      */
-    int llamar_cliente(int turno_llamar);
+    void llamar_cliente(int turno_llamar);
 
 #endif //_EMPLEADO_H
 };

@@ -6,6 +6,7 @@
 #include "carritodecompra.h"
 #include "libreria.h"
 #include"cliente.h"
+#include "producto.h"
 
 /**
  * carritodecompra implementation
@@ -53,15 +54,11 @@ int carritodecompra::get_cantidadpr() {
 float carritodecompra::calcular_total(list<producto> Lista_comprar) {
 
     float total = 0;
-    float precio_int = 0;
-    int cant_p = 0;
-    list <producto> ::iterator it = Lista_comprar.begin();
 
-    for (it; it != Lista_comprar.end(); it++) {
-
-        cant_p = this->get_cantidadpr();
-        precio_int = it->get_precio() * cant_p;
-        total = total + precio_int;
+    for (producto aux : Lista_comprar) {
+        int cant_int = aux.get_cantidad();
+        total = total + (aux.get_precio() *cant_int);
     }
+
     return total; 
 }

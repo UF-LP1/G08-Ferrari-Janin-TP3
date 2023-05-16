@@ -14,9 +14,8 @@
 int main()
 {
 	list<producto> Lista;
-	list<producto>& Lista_comprar1;
-	//int* l1 = Lista_comprar1.begin();
-	list<producto>& Lista_comprar2;
+	list<producto> Lista_comprar1;
+	list<producto> Lista_comprar2;
 
 	producto vela("numero", 2, 200);
 	producto globo("metalizado", 15, 150);
@@ -26,18 +25,21 @@ int main()
 	producto disfraces("vaca", 1, 3000);
 	producto art_reposteria("molde para torta", 2, 1500);
 
+
 	Lista.push_back(vela);
 	Lista.push_back(globo);
 	Lista.push_back(cotillon);
-	Lista.push_back(vajilla); 
+	Lista.push_back(vajilla);
 	Lista.push_back(golosinas);
 	Lista.push_back(disfraces);
 	Lista.push_back(art_reposteria);
 
+	establecimiento cot_lugar("9:00/19:00", "La Feliz", "Sarmiento 1853", 2231234567, Lista);
 
-	establecimiento cot_lugar("9:00/19:00", "La Feliz", "Sarmiento 1853", 2231234567);
+	
+	
 
-	bool encontrado = cot_lugar.buscarproductos("golosinas");
+	bool encontrado = cot_lugar.buscarproductos("vaca");
 
 	if (encontrado == true)
 		cout << "El producto se encuentra en el establecimiento" << endl;
@@ -48,11 +50,11 @@ int main()
 	cliente* Ana = new cliente("Ana", "1677853", "678759", "tarjeta debito", 2);
 	
 
-	producto p1 = { "vela",2,150 };
-	producto p2 = { "globo",10,50 };
-	producto p3 = { "vaso",100,200 };
-	producto p4 = { "chupetin",2,100 };
-	producto p5 = { "plato",200,300 };
+	producto p1= producto("vela", 2, 150);
+	producto p2 = producto("globo", 10, 50);
+	producto p3 =producto("vaso", 10, 200);
+	producto p4 = producto("chupetin", 2, 100);
+	producto p5 = producto("plato", 20, 300);
 
 	carritodecompra* carroCamila = new carritodecompra(12, 12345678);
 	carritodecompra* carroAna = new carritodecompra(302, 1677853);
@@ -64,13 +66,18 @@ int main()
 	Ana->agregarproducto(p4,Lista_comprar2);
 	Ana->agregarproducto(p5,Lista_comprar2);
 
+	empleado* Maria = new empleado("Maria", "Durand", 344433, "7:00/19:00", 250, "femenino");
+	empleado* Saul = new empleado("Saul", "Lezama", 71816, "7:00/19:00", 250, "masculino");
+
+	Maria->llamar_cliente(Camila->get_nturno());
+	Saul->llamar_cliente(Ana->get_nturno());
 
 	float ptotalC = 0;
 	ptotalC = carroCamila->calcular_total(Lista_comprar1);
 	cout << "El precio total a pagar por Camila es:" << ptotalC<< endl;
 
 	float ptotalA = 0;
-	ptotalA= carroCamila->calcular_total(Lista_comprar1);
+	ptotalA= carroAna->calcular_total(Lista_comprar2);
 	cout << "El precio total a pagar por Ana es:" << ptotalA << endl;
 
 	float pagacon1 = 0;
@@ -79,9 +86,9 @@ int main()
 	cout << "Ingrese la cantidad de plata con la que abona el primer cliente" << endl;
 	cin >> pagacon1;
 
-
 	cout << "Ingrese la cantidad de plata con la que abona el segundo cliente" << endl;
 	cin >> pagacon2;
+
 
 	encargado* encargado1 = new encargado("Isabella", "Ferrari", 900000, "7:00/17:00", 100.0, "femenino");
 	encargado* encargado2 = new encargado("Emilia", "Janin", 4574446, "9:00/13:00", 10000000.0, "femenino");
@@ -92,15 +99,28 @@ int main()
 	vuelto1=encargado1->vuelto(pagacon1, ptotalC);
 	vuelto2=encargado2->vuelto(pagacon2, ptotalA);
 
-	cout << "El vuelto de Camila es de:" << vuelto1 << endl;
-	cout << "El vuelto de Ana es de:" << vuelto2 << endl;
+	if (pagacon1 < ptotalC)
+		cout << "Falta plata del Camila" << endl;
+	else
+	{
+		cout << "El vuelto de Camila es de:" << vuelto1 << endl;
+	}
 
+	if (pagacon2 < ptotalA) 
+		cout << "Falta plata de Ana" << endl;
+	else
+	{
+		cout << "El vuelto de Ana es de:" << vuelto2 << endl;
+	}
 
 	delete Camila;
 	delete Ana;
 	delete carroCamila;
 	delete carroAna;
-	
+	delete Maria;
+	delete Saul;
+	delete encargado1;
+	delete encargado2;
 
 	return 0;
 }

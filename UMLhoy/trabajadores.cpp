@@ -22,8 +22,7 @@ trabajadores::trabajadores(string nombre, string apellido,  int dni, string hora
 };
 
 trabajadores::~trabajadores() {
-    cout << "trabajadores destruido" << endl;
-};
+   };
 
 
 
