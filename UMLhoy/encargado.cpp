@@ -16,6 +16,11 @@
  */
 float encargado::vuelto(float plata_abona, float p_total) {
 
+    if (plata_abona < p_total)
+    {
+        throw invalid_argument("Falta plata");
+    }
+
     return plata_abona - p_total;
 }
 
