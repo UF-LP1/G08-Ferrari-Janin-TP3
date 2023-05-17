@@ -29,13 +29,22 @@ int velas::get_tamanio() {
     return this->tamanio;
 }
 
+void velas::imprimir_datos()
+{
+    cout << this->color << this->tamanio << endl;
+}
+
+
+
 /**
  * @param tamaño
  * @return void
  */
 
-velas::velas(string color, int tamanio) :producto(nombre, cantidad, precio)
+velas::velas(string color, int tamanio, string nombre, int cantidad, int precio) :producto(nombre, cantidad, precio)
 {
+    this->color;
+    this->tamanio;
 };
 
 velas::~velas()

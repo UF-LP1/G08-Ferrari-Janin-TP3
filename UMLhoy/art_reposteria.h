@@ -13,18 +13,19 @@
 
 class art_reposteria: public producto {
 public: 
-    art_reposteria(enum articulorep tipo_articulo, string tipo_decoracio_rep, int tamanio);
+    art_reposteria(enum articulorep tipo_articulo, string tipo_decoracion_rep, int tamanio, string nombre, int cantidad, int precio);
     ~art_reposteria();
 
   
 enum articulorep get_tipo_articulo();
-    
+
 string get_decoracion_rep();
+
+void imprimir_datos();
 
 private: 
     enum articulorep tipo_articulo;
     string tipo_decoracion_rep;
     int tamanio;
 };
-
 #endif //_ART_REPOSTERIA_H

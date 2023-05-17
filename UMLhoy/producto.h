@@ -27,6 +27,8 @@ int get_precio();
  * @param precio
  */
 void set_precio(int n_precio);
+
+virtual void imprimir_datos();
     
 /**
  * @param nombre

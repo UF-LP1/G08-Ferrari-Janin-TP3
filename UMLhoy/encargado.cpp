@@ -20,8 +20,10 @@ float encargado::vuelto(float plata_abona, float p_total) {
     {
         throw invalid_argument("Falta plata");
     }
-
-    return plata_abona - p_total;
+    else
+    {
+        return plata_abona - p_total;
+    }
 }
 
 encargado::encargado(string nombre, string apellido, int dni, string horario_trabajo, float sueldo, string sexo):trabajadores(nombre, apellido, dni, horario_trabajo, sueldo, sexo)

@@ -13,11 +13,12 @@
 class disfraces: public producto {
 public: 
 
-    disfraces(string talle, string personaje, bool alquila, bool compra);
+    disfraces(string talle, string personaje, bool alquila, bool compra, string nombre, int cantidad, int precio);
     ~disfraces();
     
 string get_talle();
 string get_personaje();
+void imprimir_datos();
 
 private: 
     string talle;

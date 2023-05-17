@@ -3,12 +3,22 @@
 #include "producto.h"
 #include "empleado.h"
 #include "cliente.h"
+#include "velas.h"
+#include "cotillon.h"
 #include "carritodecompra.h"
+#include "art_reposteria.h"
+#include "articulorep.h"
 #include "trabajadores.h"
 #include "encargado.h"
+#include "globos.h"
 #include "carritodecompra.h"
-#include <iostream>
 #include "metododepago.h"
+#include "vajilla.h"
+#include "vajilla_descartable.h"
+#include "golosinas.h"
+#include "disfraces.h"
+#include <iostream>
+
 
 
 int main()
@@ -17,26 +27,25 @@ int main()
 	list<producto> Lista_comprar1;
 	list<producto> Lista_comprar2;
 
-	producto vela("numero", 2, 200);
-	producto globo("metalizado", 15, 150);
-	producto cotillon("mascara", 1, 500);
-	producto vajilla("plato", 20, 100);
-	producto golosinas("chicles", 10, 300);
-	producto disfraces("vaca", 1, 3000);
-	producto art_reposteria("molde para torta", 2, 1500);
+	velas vela("rojo", 2,"vela",200,200);
+	globos globo("rojo", "marianita","corazon", "globo", 400, 20);
+	cotillon mascara("marianita"," terror",mascaras,"mascara",1000,1000);
+	vajilla_descartable plato(platos, "negro",1,"plato",500,15);
+	golosinas chicle("beldent", chicles,"chicle",1000,400);
+	disfraces disfraz("mediano", "princesa", false, true,"disfraz",50,5000);
+	//art_reposteria molde(moldes_tortas, 2, 1500, "molde",1,2000);
 
 
 	Lista.push_back(vela);
 	Lista.push_back(globo);
-	Lista.push_back(cotillon);
-	Lista.push_back(vajilla);
-	Lista.push_back(golosinas);
-	Lista.push_back(disfraces);
-	Lista.push_back(art_reposteria);
+	Lista.push_back(mascara);
+	Lista.push_back(plato);
+	Lista.push_back(chicle);
+	Lista.push_back(disfraz);
+	//Lista.push_back(molde);
 
 	establecimiento cot_lugar("9:00/19:00", "La Feliz", "Sarmiento 1853", 2231234567, Lista);
 
-	
 	
 
 	bool encontrado = cot_lugar.buscarproductos("vaca");
@@ -50,11 +59,11 @@ int main()
 	cliente* Ana = new cliente("Ana", "1677853", "678759", "tarjeta debito", 2);
 	
 
-	producto p1= producto("vela", 2, 150);
-	producto p2 = producto("globo", 10, 50);
-	producto p3 =producto("vaso", 10, 200);
-	producto p4 = producto("chupetin", 2, 100);
-	producto p5 = producto("plato", 20, 300);
+	velas p1 = velas("rosa", 1, "vela", 2, 500);
+	globos p2 = globos("rojo", "mara", "corazon", "globo", 10, 20);
+	vajilla_descartable p3 = vajilla_descartable(vasos, "corazones", 1, "vasos", 30, 20);
+	golosinas p4 = golosinas("picodulce", chupetines, "chupetin", 3, 100);
+	vajilla_descartable p5 = vajilla_descartable(platos, "rayado", 2, "platos", 30, 30);
 
 	carritodecompra* carroCamila = new carritodecompra(12, 12345678);
 	carritodecompra* carroAna = new carritodecompra(302, 1677853);
@@ -64,7 +73,8 @@ int main()
 	Camila->agregarproducto(p2,Lista_comprar1);
 	Ana->agregarproducto(p3,Lista_comprar2);
 	Ana->agregarproducto(p4,Lista_comprar2);
-	Ana->agregarproducto(p5,Lista_comprar2);
+	Ana->agregarproducto(p5, Lista_comprar2);
+
 
 	empleado* Maria = new empleado("Maria", "Durand", 344433, "7:00/19:00", 250, "femenino");
 	empleado* Saul = new empleado("Saul", "Lezama", 71816, "7:00/19:00", 250, "masculino");
@@ -93,24 +103,18 @@ int main()
 	encargado* encargado1 = new encargado("Isabella", "Ferrari", 900000, "7:00/17:00", 100.0, "femenino");
 	encargado* encargado2 = new encargado("Emilia", "Janin", 4574446, "9:00/13:00", 10000000.0, "femenino");
 
+
 	float vuelto1 = 0;
 	float vuelto2 = 0;
 
-	vuelto1=encargado1->vuelto(pagacon1, ptotalC);
-	vuelto2=encargado2->vuelto(pagacon2, ptotalA);
-
-	if (pagacon1 < ptotalC)
-		cout << "Falta plata del Camila" << endl;
-	else
+	try 
 	{
-		cout << "El vuelto de Camila es de:" << vuelto1 << endl;
+		vuelto1 = encargado1->vuelto(pagacon1, ptotalC);
+		vuelto2 = encargado2->vuelto(pagacon2, ptotalA);
 	}
 
-	if (pagacon2 < ptotalA) 
-		cout << "Falta plata de Ana" << endl;
-	else
-	{
-		cout << "El vuelto de Ana es de:" << vuelto2 << endl;
+	catch (invalid_argument& e) {
+		cerr << e.what() << endl;
 	}
 
 	delete Camila;

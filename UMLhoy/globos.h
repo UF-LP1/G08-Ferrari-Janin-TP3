@@ -13,17 +13,16 @@
 class globos: public producto {
 public: 
     
-    globos(string color, string marca, string forma);
+    globos(string color, string marca, string forma, string nombre, int cantidad, int precio);
     ~globos();
 
 string get_color();
     
 string get_marca();
-    
-/**
- * @param color
- */
+ 
 void set(string n_color);
+
+void imprimir_datos();
 
 private: 
     string color;

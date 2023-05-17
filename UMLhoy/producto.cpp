@@ -52,6 +52,13 @@ void producto::set_precio(int n_precio) {
     return;
 }
 
+void producto::imprimir_datos()
+{
+    return;
+}
+
+//void imprimir_datos() 
+
 /**
  * @param nombre
  * @return void

@@ -33,8 +33,18 @@ void globos::set(string n_color) {
     return;
 }
 
-globos::globos(string color, string marca, string forma):producto(nombre, cantidad, precio)
-{};
+void globos::imprimir_datos()
+{
+    cout << this->color << this->marca << this->forma << endl;
+}
+
+globos::globos(string color, string marca, string forma, string nombre, int cantidad, int precio) 
+                :producto(nombre, cantidad, precio)
+{
+    this->color;
+    this->marca;
+    this->forma;
+};
 
 globos::~globos()
 {

@@ -14,19 +14,16 @@
 class golosinas: public producto {
 public: 
 
-    golosinas(string marca, enum t_golosinas tipo_golosinas);
+    golosinas(string marca, enum t_golosinas tipo_golosinas, string nombre, int cantidad, int precio);
     ~golosinas();
     
-enum t_golosinas get_tipo_golosina();
-    
-/**
- * @param marca
- */
+enum t_golosinas get_tipo_golosinas();
 void set_marca(string n_marca);
+void imprimir_datos();
 
 private: 
     string marca;
-    enum t_golosinas tipo_golosina;
+    enum t_golosinas tipo_golosinas;
 };
 
 #endif //_GOLOSINAS_H

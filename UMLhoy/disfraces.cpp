@@ -24,7 +24,13 @@ string disfraces::get_personaje() {
     return this->personaje;
 }
 
-disfraces::disfraces(string talle, string personaje, bool alquila, bool compra) :producto(nombre, cantidad, precio)
+void disfraces::imprimir_datos()
+{
+    cout << this->talle << this->personaje << this->alquila << this->compra << endl;
+}
+
+disfraces::disfraces(string talle, string personaje, bool alquila, bool compra, string nombre, int cantidad, int precio)
+                    :producto(nombre, cantidad, precio)
 {
     talle = this->talle;
     personaje = this->personaje;

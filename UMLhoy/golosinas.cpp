@@ -13,8 +13,8 @@
 /**
  * @return enum t_golosinas
  */
-enum t_golosinas golosinas::get_tipo_golosina() {
-    return this->tipo_golosina;
+enum t_golosinas golosinas::get_tipo_golosinas() {
+    return this->tipo_golosinas;
 }
 
 /**
@@ -26,8 +26,17 @@ void golosinas::set_marca(string n_marca) {
     return;
 }
 
-golosinas::golosinas(string marca, enum t_golosinas tipo_golosinas) :producto(nombre, cantidad, precio)
-{};
+void golosinas::imprimir_datos()
+{
+    cout << this->marca << this->tipo_golosinas << endl;
+}
+
+golosinas::golosinas(string marca, enum t_golosinas tipo_golosinas, string nombre, int cantidad, int precio) 
+                        :producto(nombre, cantidad, precio)
+{
+    this->marca;
+    this->tipo_golosinas;
+};
 
 golosinas::~golosinas()
 {

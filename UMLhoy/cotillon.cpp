@@ -29,9 +29,15 @@ string cotillon::get_decoracion() {
  */
 enum cosascot cotillon::get_cosas_de_cotillon() {
     return this->cosas_de_cotillon;
-};
+}
+void cotillon::imprimir_datos()
+{
+    cout << this->marca << this->decoracion << this->cosas_de_cotillon << endl;
+}
+;
 
-cotillon::cotillon( string marca, string decoracion, enum cosascot cosas_de_cotillon):producto(nombre, cantidad, precio)
+cotillon::cotillon( string marca, string decoracion, enum cosascot cosas_de_cotillon, string nombre, int cantidad, int precio):
+                    producto(nombre, cantidad, precio)
 {
     marca = this->marca;
     decoracion = this->decoracion;

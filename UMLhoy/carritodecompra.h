@@ -16,12 +16,11 @@ public:
     carritodecompra(int cantidadpr, int dni_cliente);
     ~carritodecompra();
 
+
 int get_cantidadpr();
-    
     
 int get_dni_cliente();
     
-
 float calcular_total(list<producto> Lista_comprar);
 
 private: 
