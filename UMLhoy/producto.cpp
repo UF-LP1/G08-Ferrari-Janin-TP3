@@ -15,10 +15,12 @@
  * @param cantidad
  * @param precio
  */
-producto::producto(string nombre,  int cantidad, int precio) {
+
+int producto::cantidad = 0;
+
+producto::producto(string nombre, int precio) {
 
     this->nombre = nombre;
-    this->cantidad = cantidad;
     this->precio = precio;
 }
 
@@ -32,8 +34,8 @@ string producto::get_nombre() {
 /**
  * @return unsigned int
  */
- int producto::get_cantidad() {
-    return this->cantidad;
+int producto::get_cantidad() {
+    return cantidad;
 }
 
 /**

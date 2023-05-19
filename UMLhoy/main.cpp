@@ -19,6 +19,7 @@
 #include "disfraces.h"
 #include <iostream>
 
+//static y friend(si podemos)
 
 
 int main()
@@ -32,7 +33,7 @@ int main()
 	cotillon mascara("marianita"," terror",mascaras,"mascara",1000,1000);
 	vajilla_descartable plato(platos, "negro",1,"plato",500,15);
 	golosinas chicle("beldent", chicles,"chicle",1000,400);
-	disfraces disfraz("mediano", "princesa", false, true,"disfraz",50,5000);
+	disfraces disfraz("mediano", "princesa", false, true,"disfraz",5000);
 	//art_reposteria molde(moldes_tortas, 2, 1500, "molde",1,2000);
 
 
@@ -46,9 +47,8 @@ int main()
 
 	establecimiento cot_lugar("9:00/19:00", "La Feliz", "Sarmiento 1853", 2231234567, Lista);
 
-	
 
-	bool encontrado = cot_lugar.buscarproductos("vaca");
+	bool encontrado = cot_lugar.buscarproductos("vela");
 
 	if (encontrado == true)
 		cout << "El producto se encuentra en el establecimiento" << endl;
@@ -100,13 +100,13 @@ int main()
 	cin >> pagacon2;
 
 
-	encargado* encargado1 = new encargado("Isabella", "Ferrari", 900000, "7:00/17:00", 100.0, "femenino");
-	encargado* encargado2 = new encargado("Emilia", "Janin", 4574446, "9:00/13:00", 10000000.0, "femenino");
+	encargado* encargado1 = new encargado("Isabella", "Ferrari", 900000, "7:00/17:00", 1000.0, "femenino");
+	encargado* encargado2 = new encargado("Emilia", "Janin", 4574446, "9:00/13:00", 100.0, "femenino");
 
 
 	float vuelto1 = 0;
 	float vuelto2 = 0;
-
+	
 	try 
 	{
 		vuelto1 = encargado1->vuelto(pagacon1, ptotalC);
@@ -116,6 +116,7 @@ int main()
 	catch (invalid_argument& e) {
 		cerr << e.what() << endl;
 	}
+
 
 	delete Camila;
 	delete Ana;

@@ -41,7 +41,7 @@ void velas::imprimir_datos()
  * @return void
  */
 
-velas::velas(string color, int tamanio, string nombre, int cantidad, int precio) :producto(nombre, cantidad, precio)
+velas::velas(string color, int tamanio, string nombre, int precio) :producto(nombre, precio)
 {
     this->color;
     this->tamanio;

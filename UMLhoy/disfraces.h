@@ -13,7 +13,7 @@
 class disfraces: public producto {
 public: 
 
-    disfraces(string talle, string personaje, bool alquila, bool compra, string nombre, int cantidad, int precio);
+    disfraces(string talle, string personaje, bool alquila, bool compra, string nombre, int precio);
     ~disfraces();
     
 string get_talle();

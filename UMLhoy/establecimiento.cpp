@@ -4,6 +4,7 @@
 
 
 #include "establecimiento.h"
+#include "disfraces.h"
 
 /**
  * establecimiento implementation
@@ -23,7 +24,10 @@ bool establecimiento::buscarproductos(string nombre)
     list<producto>::iterator it = Lista.begin();
     while (it != Lista.end()) {
         if (it->get_nombre() == nombre) {
-            return true;
+            producto aux = *it;
+            disfraces* disfrazn = dynamic_cast<disfraces*>(&aux);
+
+        return true;
         }
         it++;
     }
