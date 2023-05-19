@@ -13,7 +13,7 @@
 class globos: public producto {
 public: 
     
-    globos(string color, string marca, string forma, string nombre, int cantidad, int precio);
+    globos(string color, string marca, string forma, string nombre, int precio, int cantidad);
     ~globos();
 
 string get_color();

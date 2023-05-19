@@ -36,8 +36,8 @@ void cotillon::imprimir_datos()
 }
 ;
 
-cotillon::cotillon( string marca, string decoracion, enum cosascot cosas_de_cotillon, string nombre, int cantidad, int precio):
-                    producto(nombre, cantidad, precio)
+cotillon::cotillon( string marca, string decoracion, enum cosascot cosas_de_cotillon, string nombre, int precio, int cantidad):
+                    producto(nombre, precio, cantidad)
 {
     marca = this->marca;
     decoracion = this->decoracion;

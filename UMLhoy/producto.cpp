@@ -16,12 +16,13 @@
  * @param precio
  */
 
-int producto::cantidad = 0;
+int producto::stockt = 0;
 
-producto::producto(string nombre, int precio) {
+producto::producto(string nombre, int precio, int cantidad) {
 
     this->nombre = nombre;
     this->precio = precio;
+    this->cantidad;
 }
 
 /**
@@ -34,8 +35,8 @@ string producto::get_nombre() {
 /**
  * @return unsigned int
  */
-int producto::get_cantidad() {
-    return cantidad;
+int producto::get_stockt() {
+    return stockt;
 }
 
 /**
@@ -45,12 +46,21 @@ int producto::get_cantidad() {
     return this->precio;
 }
 
+ int producto::get_cantidad(){
+     return this->cantidad;
+ }
+
 /**
  * @param precio
  * @return void
  */
 void producto::set_precio(int n_precio) {
     precio = n_precio;
+    return;
+}
+
+void producto::set_cantidad(int cant_n) {
+    cantidad = cant_n;
     return;
 }
 

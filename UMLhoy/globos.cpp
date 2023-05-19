@@ -38,8 +38,8 @@ void globos::imprimir_datos()
     cout << this->color << this->marca << this->forma << endl;
 }
 
-globos::globos(string color, string marca, string forma, string nombre, int cantidad, int precio) 
-                :producto(nombre, cantidad, precio)
+globos::globos(string color, string marca, string forma, string nombre, int precio, int cantidad)
+                :producto(nombre, precio, cantidad)
 {
     this->color;
     this->marca;

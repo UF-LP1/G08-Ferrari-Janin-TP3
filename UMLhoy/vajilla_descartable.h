@@ -14,7 +14,7 @@
 class vajilla_descartable: public producto {
 public:
     
-    vajilla_descartable(enum vajilla tipo_vajilla, string decoracion_vajilla, int tamanio, string nombre, int cantidad, int precio);
+    vajilla_descartable(enum vajilla tipo_vajilla, string decoracion_vajilla, int tamanio, string nombre, int precio, int cantidad);
     ~vajilla_descartable();
     
 

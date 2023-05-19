@@ -28,11 +28,11 @@ int main()
 	list<producto> Lista_comprar1;
 	list<producto> Lista_comprar2;
 
-	velas vela("rojo", 2,"vela",200,200);
-	globos globo("rojo", "marianita","corazon", "globo", 400, 20);
-	cotillon mascara("marianita"," terror",mascaras,"mascara",1000,1000);
-	vajilla_descartable plato(platos, "negro",1,"plato",500,15);
-	golosinas chicle("beldent", chicles,"chicle",1000,400);
+	velas vela("rojo", 2,"vela",200);
+	globos globo("rojo", "marianita","corazon", "globo", 20);
+	cotillon mascara("marianita"," terror",mascaras,"mascara",1000);
+	vajilla_descartable plato(platos, "negro",1,"plato",15);
+	golosinas chicle("beldent", chicles,"chicle",400);
 	disfraces disfraz("mediano", "princesa", false, true,"disfraz",5000);
 	//art_reposteria molde(moldes_tortas, 2, 1500, "molde",1,2000);
 
@@ -59,11 +59,11 @@ int main()
 	cliente* Ana = new cliente("Ana", "1677853", "678759", "tarjeta debito", 2);
 	
 
-	velas p1 = velas("rosa", 1, "vela", 2, 500);
-	globos p2 = globos("rojo", "mara", "corazon", "globo", 10, 20);
-	vajilla_descartable p3 = vajilla_descartable(vasos, "corazones", 1, "vasos", 30, 20);
-	golosinas p4 = golosinas("picodulce", chupetines, "chupetin", 3, 100);
-	vajilla_descartable p5 = vajilla_descartable(platos, "rayado", 2, "platos", 30, 30);
+	velas p1 = velas("rosa", 1, "vela", 500);
+	globos p2 = globos("rojo", "mara", "corazon", "globo", 20);
+	vajilla_descartable p3 = vajilla_descartable(vasos, "corazones", 1, "vasos", 20);
+	golosinas p4 = golosinas("picodulce", chupetines, "chupetin", 100);
+	vajilla_descartable p5 = vajilla_descartable(platos, "rayado", 2, "platos", 30);
 
 	carritodecompra* carroCamila = new carritodecompra(12, 12345678);
 	carritodecompra* carroAna = new carritodecompra(302, 1677853);

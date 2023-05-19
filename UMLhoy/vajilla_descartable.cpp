@@ -29,8 +29,8 @@ void vajilla_descartable::imprimir_datos()
     cout << this->tipo_vajilla << this->decoracion_vajilla << this->tamanio << endl;
 }
 
-vajilla_descartable::vajilla_descartable(enum vajilla tipo_vajilla, string decoracion_vajilla, int tamanio, string nombre, int cantidad, int precio)
-                                    :producto(nombre, cantidad, precio)
+vajilla_descartable::vajilla_descartable(enum vajilla tipo_vajilla, string decoracion_vajilla, int tamanio, string nombre, int precio, int cantidad)
+                                    :producto(nombre, precio, cantidad)
 {
     this->tipo_vajilla;
     this->decoracion_vajilla;

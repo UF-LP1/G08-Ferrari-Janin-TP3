@@ -9,7 +9,7 @@
 
 class producto {
 public: 
-    producto(string nombre,  int precio);
+    producto(string nombre,  int precio, int cantidad);
     ~producto();
 /**
  * @param nombre
@@ -19,14 +19,18 @@ public:
 
 string get_nombre();
     
-static int get_cantidad();
+static int get_stockt();
     
 int get_precio();
+
+int get_cantidad();
     
 /**
  * @param precio
  */
 void set_precio(int n_precio);
+
+void set_cantidad(int cant_n);
 
 virtual void imprimir_datos();
     
@@ -37,8 +41,9 @@ virtual void imprimir_datos();
 
 protected: 
     string nombre;
-    static int cantidad;
+    static int stockt;
     int precio;
+    int cantidad;
     
  
 };

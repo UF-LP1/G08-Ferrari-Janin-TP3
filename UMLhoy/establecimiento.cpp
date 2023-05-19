@@ -5,7 +5,12 @@
 
 #include "establecimiento.h"
 #include "disfraces.h"
-
+#include "velas.h"
+#include "art_reposteria.h"
+#include "cotillon.h"
+#include "vajilla_descartable.h"
+#include "globos.h"
+#include "golosinas.h"
 /**
  * establecimiento implementation
  */
@@ -25,9 +30,7 @@ bool establecimiento::buscarproductos(string nombre)
     while (it != Lista.end()) {
         if (it->get_nombre() == nombre) {
             producto aux = *it;
-            disfraces* disfrazn = dynamic_cast<disfraces*>(&aux);
-
-        return true;
+            return true;
         }
         it++;
     }

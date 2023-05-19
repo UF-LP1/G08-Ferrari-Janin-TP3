@@ -11,7 +11,7 @@
 
 class velas: public producto {
 public: 
-    velas(string color, int tamanio, string nombre, int precio);
+    velas(string color, int tamanio, string nombre, int precio, int cantidad);
     ~velas();
 
 string get_color();

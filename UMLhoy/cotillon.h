@@ -13,7 +13,7 @@
 class cotillon: public producto {
 public: 
 
-    cotillon(string marca, string decoracion, enum cosascot cosas_de_cotillon, string nombre, int cantidad, int precio);
+    cotillon(string marca, string decoracion, enum cosascot cosas_de_cotillon, string nombre, int precio, int cantidad);
     ~cotillon();
     
 string get_marca();

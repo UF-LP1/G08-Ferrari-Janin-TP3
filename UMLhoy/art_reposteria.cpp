@@ -11,8 +11,8 @@
  * art_reposteria implementation
  */
 
-art_reposteria::art_reposteria(enum articulorep tipo_articulo, string tipo_decoracion_rep, int cantidad, int tamanio, string nombre, int precio) 
-    :producto(nombre, precio) {
+art_reposteria::art_reposteria(enum articulorep tipo_articulo, string tipo_decoracion_rep, int tamanio,int cant_ar, string nombre, int precio, int cantidad)
+    :producto(nombre, precio, cantidad) {
 
     this->tipo_articulo;
     this->tipo_decoracion_rep;

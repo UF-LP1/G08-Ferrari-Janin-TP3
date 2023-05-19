@@ -14,7 +14,7 @@
 class golosinas: public producto {
 public: 
 
-    golosinas(string marca, enum t_golosinas tipo_golosinas, string nombre, int cantidad, int precio);
+    golosinas(string marca, enum t_golosinas tipo_golosinas, string nombre, int precio, int cantidad);
     ~golosinas();
     
 enum t_golosinas get_tipo_golosinas();

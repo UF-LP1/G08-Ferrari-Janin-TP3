@@ -29,8 +29,8 @@ void disfraces::imprimir_datos()
     cout << this->talle << this->personaje << this->alquila << this->compra << endl;
 }
 
-disfraces::disfraces(string talle, string personaje, bool alquila, bool compra, string nombre, int precio)
-                    :producto(nombre, precio)
+disfraces::disfraces(string talle, string personaje, bool alquila, bool compra, string nombre, int precio, int cantidad)
+                    :producto(nombre, precio, cantidad)
 {
     talle = this->talle;
     personaje = this->personaje;//este atributo es distinto de nombre, ya que por ejemplo,

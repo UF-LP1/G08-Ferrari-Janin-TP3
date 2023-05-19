@@ -31,8 +31,8 @@ void golosinas::imprimir_datos()
     cout << this->marca << this->tipo_golosinas << endl;
 }
 
-golosinas::golosinas(string marca, enum t_golosinas tipo_golosinas, string nombre, int cantidad, int precio) 
-                        :producto(nombre, cantidad, precio)
+golosinas::golosinas(string marca, enum t_golosinas tipo_golosinas, string nombre, int precio, int cantidad)
+                        :producto(nombre, precio, cantidad)
 {
     this->marca;
     this->tipo_golosinas;
