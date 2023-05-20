@@ -29,7 +29,6 @@ private:
     string telefono;
     string metodo_pago;
     int nturno;
-
     list<producto> Lista_comprar;
 };
 

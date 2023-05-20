@@ -21,7 +21,11 @@ enum vajilla get_tipo_vajilla();
 
 string get_decoracion_vajilla();
 
+int get_tamanio();
+
 void imprimir_datos();
+
+bool buscarvajilla( enum vajilla vajillabuscar,string decoracionbuscada, int tamaniobuscar, list<producto*> Lista);
 
 private: 
     enum vajilla tipo_vajilla;

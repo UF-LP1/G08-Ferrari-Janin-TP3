@@ -82,7 +82,6 @@ establecimiento::establecimiento(string horario, string nombre, string direccion
     this->direccion = direccion;
     this->telefono = telefono;
     this->Lista = Lista;
-   // Lista = list<producto>();
 };
 
 establecimiento::~establecimiento()

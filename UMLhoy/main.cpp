@@ -19,9 +19,6 @@
 #include "disfraces.h"
 #include <iostream>
 
-//static y friend(si podemos)
-
-
 int main()
 {
 	list<producto> Lista;
@@ -34,8 +31,6 @@ int main()
 	vajilla_descartable plato(platos, "negro",1,"plato",100,15);
 	golosinas chicle("beldent", chicles,"chicle",500,400);
 	disfraces disfraz("mediano", "princesa", false, true,"disfraz",5,5000);
-	//art_reposteria molde(moldes_tortas, 2, 1500, "molde",1,2000);
-
 
 	Lista.push_back(vela);
 	Lista.push_back(globo);
@@ -43,10 +38,11 @@ int main()
 	Lista.push_back(plato);
 	Lista.push_back(chicle);
 	Lista.push_back(disfraz);
-	//Lista.push_back(molde);
 
 	establecimiento cot_lugar("9:00/19:00", "La Feliz", "Sarmiento 1853", 2231234567, Lista);
 
+	//Intentamos hacer un switch para usar los dynamic cast que tenemos en funciones que se llaman buscar 
+	//productos, pero no supimos como hacerlo y por eso no estan en el main
 
 	bool encontrado = cot_lugar.buscarproductos("vela");
 
@@ -67,7 +63,6 @@ int main()
 
 	carritodecompra* carroCamila = new carritodecompra(12, 12345678);
 	carritodecompra* carroAna = new carritodecompra(302, 1677853);
-
 
 	Camila->agregarproducto(p1,Lista_comprar1);
 	Camila->agregarproducto(p2,Lista_comprar1);
@@ -90,6 +85,15 @@ int main()
 	ptotalA= carroAna->calcular_total(Lista_comprar2);
 	cout << "El precio total a pagar por Ana es:" << ptotalA << endl;
 
+	cout << "En el carrito de Camila hay:" << endl;
+	p1.imprimir_datos();
+	p2.imprimir_datos();
+
+	cout << "En el carrito de Ana hay:" << endl;
+	p3.imprimir_datos();
+	p4.imprimir_datos();
+	p5.imprimir_datos();
+	
 	float pagacon1 = 0;
 	float pagacon2 = 0;
 
@@ -116,6 +120,11 @@ int main()
 	catch (invalid_argument& e) {
 		cerr << e.what() << endl;
 	}
+	
+	if (vuelto1 >= 0)
+		cout << "El vuelto de Camila es de:" << vuelto1<<"$" << endl;
+	if (vuelto2 >= 0)
+		cout << "El vuelto de Ana es de:" << vuelto2 << "$" << endl;
 
 
 	delete Camila;
@@ -129,4 +138,5 @@ int main()
 
 	return 0;
 }
+
 

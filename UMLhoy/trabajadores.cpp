@@ -17,8 +17,14 @@
  * @param dni
  */
 
-trabajadores::trabajadores(string nombre, string apellido,  int dni, string horario_trabajo, float sueldo, string sexo) 
+trabajadores::trabajadores(string nombre, string apellido, int dni, string horario_trabajo, float sueldo, string sexo) 
 {
+    this->nombre = nombre;
+    this->apellido = apellido;
+    this->dni = dni;
+    this->horario_trabajo = horario_trabajo;
+    this->sueldo = sueldo;
+    this->sexo = sexo;
 };
 
 trabajadores::~trabajadores() {

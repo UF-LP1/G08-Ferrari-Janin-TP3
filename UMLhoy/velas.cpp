@@ -31,7 +31,7 @@ int velas::get_tamanio() {
 
 void velas::imprimir_datos()
 {
-    cout << this->color << this->tamanio << endl;
+    cout <<"Articulo: "<<get_nombre() << ".Color: " << this->color << ".Tamanio: " << this->tamanio << endl;
 }
 
 
@@ -43,10 +43,28 @@ void velas::imprimir_datos()
 
 velas::velas(string color, int tamanio, string nombre, int precio, int cantidad) :producto(nombre, precio,cantidad)
 {
-    this->color;
-    this->tamanio;
+    this->color = color;
+    this->tamanio = tamanio;
 };
 
 velas::~velas()
 {
 };
+
+bool buscarvela( string colorbuscar, int tamaniobuscar, list<producto*>Lista)
+{
+    for (list<producto*>::iterator it = Lista.begin(); it != Lista.end(); it++)
+    {
+            producto* aux = *it;
+            if (dynamic_cast<velas*>(aux) != nullptr)
+            {
+                if ((dynamic_cast<velas*>(aux)->get_color()== colorbuscar)&&
+                    (dynamic_cast<velas*>(aux)->get_tamanio() == tamaniobuscar))
+                {
+                    return true;
+                }
+            }
+        
+    }
+    return false;
+}

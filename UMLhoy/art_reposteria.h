@@ -23,6 +23,8 @@ string get_decoracion_rep();
 
 void imprimir_datos();
 
+bool buscar_artrep(enum articulorep artrepbuscar, string decoracionbuscar, list<producto*> Lista);
+
 private: 
     enum articulorep tipo_articulo;
     string tipo_decoracion_rep;

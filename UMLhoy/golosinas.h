@@ -21,7 +21,11 @@ enum t_golosinas get_tipo_golosinas();
 
 void set_marca(string n_marca);
 
+string get_marca();
+
 void imprimir_datos();
+
+bool buscargolosinas( string marcabuscar, enum t_golosinas tipogol_buscar, list<producto*> Lista);
 
 private: 
     string marca;

@@ -22,6 +22,8 @@ void imprimir_datos();
 
 void set_tamanio( int n_tamanio);
 
+bool buscarvela( string colorbuscar, int tamaniobuscar, list<producto*>Lista);
+
 private: 
     string color;
      int tamanio;

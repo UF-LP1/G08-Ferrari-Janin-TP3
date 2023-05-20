@@ -19,10 +19,14 @@ public:
 string get_color();
     
 string get_marca();
+
+string get_forma();
  
-void set(string n_color);
+void set_color(string n_color);
 
 void imprimir_datos();
+
+bool buscarglobos(string marcabuscar, string formabuscar, list<producto*> Lista);
 
 private: 
     string color;

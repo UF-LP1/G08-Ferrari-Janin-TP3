@@ -22,14 +22,13 @@ string get_personaje();
 
 void imprimir_datos();
 
-//bool buscar_disfraces(string nombrebuscar, list<producto*> Lista);
+bool buscar_disfraces(string tallebuscar, bool compra, list<producto*> Lista);
 
 private: 
     string talle;
     string personaje;
     bool alquila;
     bool compra;
-    
 };
 
 #endif //_DISFRACES_H

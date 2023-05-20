@@ -24,6 +24,8 @@ enum cosascot get_cosas_de_cotillon();
 
 void imprimir_datos();
 
+bool buscarcotillon(string marcabuscar, string decoracionbuscar, enum cosascot cotillonbuscar, list<producto*> Lista);
+
 private: 
     string marca;
     string decoracion;
