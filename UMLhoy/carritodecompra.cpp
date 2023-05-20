@@ -45,20 +45,12 @@ int carritodecompra::get_cantidadpr() {
 }
 
 
-/**
- * @param precio_total
- * @return void
- */
-
-
 float carritodecompra::calcular_total(list<producto> Lista_comprar) {
 
     float total = 0;
-
     for (producto aux : Lista_comprar) {
-        int cant_int = get_cantidad();
-        total = total + (aux.get_precio() *cant_int);
+        int cant_int = aux.get_cantidad();
+        total = total + (aux.get_precio() * aux.get_cantidad());
     }
-
     return total; 
 }

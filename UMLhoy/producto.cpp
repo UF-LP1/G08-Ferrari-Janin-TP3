@@ -15,14 +15,13 @@
  * @param cantidad
  * @param precio
  */
-
 int producto::stockt = 0;
 
 producto::producto(string nombre, int precio, int cantidad) {
 
     this->nombre = nombre;
     this->precio = precio;
-    this->cantidad;
+    this->cantidad = cantidad;
 }
 
 /**

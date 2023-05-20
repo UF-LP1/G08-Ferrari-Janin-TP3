@@ -19,11 +19,9 @@ string get_color();
 int get_tamanio();
 
 void imprimir_datos();
-    
-/**
- * @param tamanio
- */
+
 void set_tamanio( int n_tamanio);
+
 private: 
     string color;
      int tamanio;

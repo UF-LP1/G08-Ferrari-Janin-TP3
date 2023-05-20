@@ -17,8 +17,12 @@ public:
     ~disfraces();
     
 string get_talle();
+
 string get_personaje();
+
 void imprimir_datos();
+
+//bool buscar_disfraces(string nombrebuscar, list<producto*> Lista);
 
 private: 
     string talle;

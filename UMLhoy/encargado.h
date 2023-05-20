@@ -16,9 +16,6 @@ public:
     encargado(string nombre, string apellido, int dni, string horario_trabajo, float sueldo, string sexo);
     ~encargado();
     
-/**
- * @param carritodecompra.precio_total
- */
 float vuelto(float plata_abona, float p_total);
 };
 

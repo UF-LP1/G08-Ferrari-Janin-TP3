@@ -18,7 +18,9 @@ public:
     ~golosinas();
     
 enum t_golosinas get_tipo_golosinas();
+
 void set_marca(string n_marca);
+
 void imprimir_datos();
 
 private: 

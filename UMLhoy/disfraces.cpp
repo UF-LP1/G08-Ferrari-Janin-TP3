@@ -42,3 +42,7 @@ disfraces::~disfraces() {
 
 };
 
+//bool buscar_disfraces(string nombrebuscar, list<producto*> Lista)
+//{
+//    for(list<producto*>::iterator it=Lista.begin();)
+//}

@@ -18,7 +18,6 @@ enum pago get_tipo_pago();
 float get_abona();
 
 void set_abona(int plata_ab);
-    
 
 private: 
     float abona;  //cantidad de plata con la que paga el cliente

@@ -31,16 +31,7 @@ string get_direccion();
     
 int get_telefono();
     
-/**
- * @param nombre
- */
 void set_nombre(string n_nombre);
-    
-/**
- * @param horario
- */
-
-protected: 
     
 private: 
     string horario;

@@ -13,26 +13,15 @@ public:
     cliente(string nombre, const string DNI, string telefono, string metodo_pago, int nturno);
     ~cliente();
 
-
 int get_nturno();
-    
+
 string get_telefono();
-    
-/**
- * @param nturno
- */
+
 void set_numturno(int nuevo_nturno);
-    
-/**
- * @param metodo_pago
- */
+
 void set_metodo_pago(string n_metodo_pago);
 
 void agregarproducto(producto producto_agregar, list<producto>& Lista_comprar);
-    
-/**
- * @param establecimiento.telefono
- */
 
 private: 
     string nombre;
