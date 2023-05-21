@@ -56,3 +56,14 @@ bool buscar_disfraces(string tallebuscar, list<producto*> Lista)
     }
     return false;
 }
+
+//stack<disfraces*> buscardisfraz(string nombre, string talle, list<producto*> Lista)
+//{
+//    stack<disfraces*> retDisfraces;
+//    for (producto Item : Lista) {
+//        disfraces* Disfraz = dynamic_cast<disfraces*>(Item);
+//        if (Item->get_nombre() == nombre && retDisfraz != nullptr && retDisfraz->get_talle() == talle)
+//            retDisfraces.push(Disfraz);
+//    }
+//    return retDisfraces;
+//}
